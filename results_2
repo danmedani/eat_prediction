@@ -1,0 +1,263 @@
+Results Part II
+
+-
+single_venue_1930.csv
+	time_interval = timedelta(hours=168)
+
+	# Each feature corresponds to a column for the data set
+	features = [
+	    day_of_week (BROKEN?),
+	    daily_order_frequency,
+	    straight_location
+	]
+
+	# Include a column for each unique client id?
+	add_client_boolean_columns = False
+
+	# Don't include users with monthly ordering frequency below this value
+	minimum_visits = 3
+
+		Prediction
+			83875
+			1319
+			82556
+		Actuals
+			83875
+			7242
+			76633
+		Confusion_matrix
+			[[75982   651]
+			 [ 6574   668]]
+		accuracy_metrics(accuracy=0.91385991058122207, precision=0.092239712786523056, recall=0.50644427596664143)
+
+
+
+
+patrons_1930_genderized.csv
+	# Files
+	order_file = 'data/patrons_1930_genderized.csv'
+
+	# Time Windows
+	start_time = datetime(2017, 1, 1)
+	test_train_split_time = datetime(2018, 1, 1)
+	end_time = datetime(2018, 3, 13)
+	time_interval = timedelta(hours=168)
+
+	# Each feature corresponds to a column for the data set
+	features = [
+	    day_of_week,
+	    daily_order_frequency,
+	    straight_location,
+	    gender,
+	    has_gender
+	]
+
+		Prediction
+			84030
+			1178
+			82852
+		Actuals
+			84030
+			7372
+			76658
+		Confusion_matrix
+			[[76096   562]
+			 [ 6756   616]]
+		accuracy_metrics(accuracy=0.91291205521837437, precision=0.083559413998914811, recall=0.52292020373514436)
+
+	VS NO GENDER:
+
+		Prediction
+			84030
+			1338
+			82692
+		Actuals
+			84030
+			7372
+			76658
+		Confusion_matrix
+			[[75961   697]
+			 [ 6731   641]]
+		accuracy_metrics(accuracy=0.91160299892895391, precision=0.086950623982637004, recall=0.47907324364723469)
+
+
+			[[
+				true negatives		false negatives
+				false positives		true positives
+			]]
+
+
+	VS WITH OPT_IN AND GENDER:
+
+		Prediction
+			83934
+			1227
+			82707
+		Actuals
+			83934
+			7377
+			76557
+		Confusion_matrix
+			[[75953   604]
+			 [ 6754   623]]
+		accuracy_metrics(accuracy=0.9123358829556556, precision=0.084451674122271933, recall=0.50774246128769351)
+
+
+
+	VS WITH JUST OPT_IN, AND NOT GENDER:
+
+		Prediction
+			83934
+			1175
+			82759
+		Actuals
+			83934
+			7377
+			76557
+		Confusion_matrix
+			[[76004   553]
+			 [ 6755   622]]
+		accuracy_metrics(accuracy=0.91293158910572592, precision=0.084316117663006646, recall=0.52936170212765954)
+
+
+ALL features, per week
+	Prediction
+		32292
+		1062
+		31230
+	Actuals
+		32292
+		4093
+		28199
+	Confusion_matrix
+		[[27808   391]
+		 [ 3422   671]]
+	accuracy_metrics(accuracy=0.88192121887774066, precision=0.16393843146836062, recall=0.63182674199623357)
+
+
+ALL features, per day
+	Prediction
+		198075
+		692
+		197383
+	Actuals
+		198075
+		5304
+		192771
+	Confusion_matrix
+		[[192547    224]
+		 [  4836    468]]
+	accuracy_metrics(accuracy=0.97445412091379524, precision=0.088235294117647065, recall=0.67630057803468213)
+
+ALL features, per 3 days
+	Prediction
+		64176
+		782
+		63394
+	Actuals
+		64176
+		4208
+		59968
+	Confusion_matrix
+		[[59737   231]
+		 [ 3657   551]]
+	accuracy_metrics(accuracy=0.93941660433807028, precision=0.13094106463878327, recall=0.70460358056265981)
+
+ALL features, per 2 days
+	Prediction
+		96001
+		732
+		95269
+	Actuals
+		96001
+		4566
+		91435
+	Confusion_matrix
+		[[91245   190]
+		 [ 4024   542]]
+	accuracy_metrics(accuracy=0.95610462391016759, precision=0.11870346035917652, recall=0.7404371584699454)
+
+
+
+
+
+
+ALL features, per 3 days, 1->10,10->11
+Prediction
+85721
+835
+84886
+Actuals
+85721
+5318
+80403
+Confusion_matrix
+[[80048   355]
+ [ 4838   480]]
+accuracy_metrics(accuracy=0.93941974545327278, precision=0.090259496051147053, recall=0.57485029940119758)
+
+
+
+
+ALL features, per 3 days, 1->10,10->11
+	Prediction
+		85721
+		835
+		84886
+	Actuals
+		85721
+		5318
+		80403
+	Confusion_matrix
+		[[80048   355]
+		 [ 4838   480]]
+	accuracy_metrics(accuracy=0.93941974545327278, precision=0.090259496051147053, recall=0.57485029940119758)
+
+Just Frequency, per 3 days, 1->10,10->11
+	Prediction
+		85721
+		1096
+		84625
+	Actuals
+		85721
+		5318
+		80403
+	Confusion_matrix
+		[[79883   520]
+		 [ 4742   576]]
+	accuracy_metrics(accuracy=0.93861480850666701, precision=0.10831139526137645, recall=0.52554744525547448)
+
+ALL features except day of week, per 3 days, 1->10,10->11
+	Prediction
+		85721
+		846
+		84875
+	Actuals
+		85721
+		5318
+		80403
+	Confusion_matrix
+	[[80065   338]
+	 [ 4810   508]]
+	accuracy_metrics(accuracy=0.93994470433149402, precision=0.095524633320797289, recall=0.60047281323877066)
+
+
+2 venues, ALL features except day of week, per 3 days, 1->10,10->11
+	Prediction
+		85721
+		846
+		84875
+	Actuals
+		85721
+		5318
+		80403
+	Confusion_matrix
+	[[80065   338]
+	 [ 4810   508]]
+	accuracy_metrics(accuracy=0.93994470433149402, precision=0.095524633320797289, recall=0.60047281323877066)
+
+
+
+
+
+

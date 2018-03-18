@@ -1,0 +1,7 @@
+matplotlib==2.0.2
+numpy==1.13.1
+pandas==0.20.3
+psycopg2==2.7.3
+scikit_learn==0.19b2
+py==1.4.31
+pytest==3.0.4

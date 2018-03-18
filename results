@@ -1,0 +1,154 @@
+results
+
+Per Day, Training set: 50,000 rows
+
+Prediction
+201409
+790
+200619
+Actuals
+201409
+5267
+196142
+Confusion_matrix
+[[195562    580]
+ [  5057    210]]
+accuracy_metrics(accuracy=0.97201217423253183, precision=0.039870894247199543, recall=0.26582278481012656)
+
+
+
+Per Day, Training set: 50,000 rows
+
+Prediction
+227934
+225
+227709
+Actuals
+227934
+2240
+225694
+Confusion_matrix
+[[225580    114]
+ [  2129    111]]
+accuracy_metrics(accuracy=0.99015943211631441, precision=0.049553571428571426, recall=0.49333333333333335)
+
+
+
+Per Week, Training set: 50,000 rows, 
+
+Prediction
+32174
+314
+31860
+Actuals
+32174
+1421
+30753
+Confusion_matrix
+[[30565   188]
+ [ 1295   126]]
+accuracy_metrics(accuracy=0.95390688133275314, precision=0.088669950738916259, recall=0.40127388535031849)
+
+
+Per week, 50,000, single_venue_1930
+	Prediction
+	40200
+	114
+	40086
+	Actuals
+	40200
+	0
+	40200
+	Confusion_matrix
+	[[40086   114]
+	 [    0     0]]
+
+Per week, FULL, single_venue_1930
+Prediction
+83875
+1319
+82556
+Actuals
+83875
+7242
+76633
+Confusion_matrix
+[[75982   651]
+ [ 6574   668]]
+accuracy_metrics(accuracy=0.91385991058122207, precision=0.092239712786523056, recall=0.50644427596664143)
+
+Per 1/2 week, FULL, single_venue_1930
+Prediction
+167481
+1074
+166407
+Actuals
+167481
+8589
+158892
+Confusion_matrix
+[[158405    487]
+ [  8002    587]]
+accuracy_metrics(accuracy=0.9493136534890525, precision=0.068343229712422862, recall=0.54655493482309125)
+
+
+Per 3 days, FULL, single_venue_1930
+Prediction
+200911
+1059
+199852
+Actuals
+200911
+8993
+191918
+Confusion_matrix
+[[191394    524]
+ [  8458    535]]
+accuracy_metrics(accuracy=0.95529363748127283, precision=0.059490715000555985, recall=0.50519357884796978)
+
+
+
+Per 3 days, FULL, double_venues 1930 && 1668, no location set
+Prediction
+254929
+1680
+253249
+Actuals
+254929
+12085
+242844
+Confusion_matrix
+[[242123    721]
+ [ 11126    959]]
+accuracy_metrics(accuracy=0.95352823727390768, precision=0.079354571783202321, recall=0.5708333333333333)
+
+
+Per 3 days, FULL, double_venues 1930 && 1668, location set
+Prediction
+254929
+1591
+253338
+Actuals
+254929
+12085
+242844
+Confusion_matrix
+[[242170    674]
+ [ 11168    917]]
+accuracy_metrics(accuracy=0.95354785057800406, precision=0.075879189077368639, recall=0.57636706473915778)
+
+Per week, FULL, top 10 venues
+Prediction
+293642
+5207
+288435
+Actuals
+293642
+21106
+272536
+Confusion_matrix
+[[270307   2229]
+ [ 18128   2978]]
+accuracy_metrics(accuracy=0.93067408613209279, precision=0.14109731829811428, recall=0.57192241213750716)
+
+
